@@ -14,8 +14,7 @@
     "format:staged": "prettier -c",
     "lint-files": "eslint --fix",
     "lint:staged": "eslint --fix",
-    "lint": "tsc --noEmit && eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
-    "cypress": "cypress open"
+    "lint": "tsc --noEmit && eslint \"**/*.{ts,tsx,js,jsx}\" --fix"
   },
   "repository": {
     "type": "git",
@@ -36,7 +35,6 @@
     "@mui/material": "^5.4.0",
     "@storybook/addon-postcss": "^2.0.0",
     "axios": "^0.25.0",
-    "cypress": "^9.5.1",
     "history": "^5.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -70,6 +68,7 @@
     "babel-loader": "^8.2.3",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "css-loader": "^6.6.0",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.8.0",
     "eslint-plugin-react": "^7.28.0",
     "file-loader": "^6.2.0",
