@@ -7,3 +7,5 @@
 .scannerwork/
 
 storybook-static
+
+.env
