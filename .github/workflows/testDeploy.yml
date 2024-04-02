@@ -64,6 +64,5 @@ jobs:
       - name: Send file to ec2
         run: |
             echo "This is sftp"  > abc.txt
-            sftp -o StrictHostKeyChecking=no -i key.pem  ubuntu@54.173.47.62 '
-            put abc.txt
-            '
+            echo "put abc.txt" | sftp -o StrictHostKeyChecking=no -i key.pem  ubuntu@54.173.47.62
+            
