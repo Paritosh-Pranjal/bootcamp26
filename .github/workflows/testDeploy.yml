@@ -26,22 +26,22 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Cache Node Modules
-        uses: actions/cache@v3
-        with:
-          path: frontend/node_modules
-          key: ${{ runner.os }}-frontend-node_modules-${{ hashFiles('frontend/package.json') }}
+    #   - name: Cache Node Modules
+    #     uses: actions/cache@v3
+    #     with:
+    #       path: frontend/node_modules
+    #       key: ${{ runner.os }}-frontend-node_modules-${{ hashFiles('frontend/package.json') }}
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+    #   - name: Set up Node.js
+    #     uses: actions/setup-node@v3
+    #     with:
+    #       node-version: 18
 
-      - name: Install Dependencies
-        run: npm install
+    #   - name: Install Dependencies
+    #     run: npm install
 
-      - name: Build application
-        run: npm run build
+    #   - name: Build application
+    #     run: npm run build
 
   deploy:
     name: Frontend EC2 Deploy
@@ -71,7 +71,5 @@ jobs:
       - name: SSH into EC2 and deploy
         run: |
           ssh -o StrictHostKeyChecking=no -i key.pem  ubuntu@54.173.47.62 '
-            mkdir test && 
-            cd test &&
-            touch 1 2 3 4
+            mkdir paritosh
           '
