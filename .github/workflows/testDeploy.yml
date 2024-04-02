@@ -57,6 +57,8 @@ jobs:
         run: |
           echo "${{ env.AWS_PRIVATE_KEY }}" > key.pem
           sudo chmod 600 key.pem
+          cat key.pem
+          ls -lh 
 
       - name: SSH into EC2 and deploy
         run: |
