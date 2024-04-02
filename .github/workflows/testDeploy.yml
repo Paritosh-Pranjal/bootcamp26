@@ -1,4 +1,4 @@
-name: frontend deployment
+name: Testing deployment
 run-name: Testing deployment update triggered by ${{ github.actor }} :- ${{ github.run_number }}.
 
 on:
@@ -60,7 +60,7 @@ jobs:
 
       - name: SSH into EC2 and deploy
         run: |
-          ssh -o StrictHostKeyChecking=no -i key.pem  ${{ secrets.AWS_EC2_USERNAME }}@54.173.47.62'
+          ssh -o StrictHostKeyChecking=no -i key.pem  ubutnu@54.173.47.62 '
             mkdir test && 
             cd test &&
             touch 1 2 3 4
