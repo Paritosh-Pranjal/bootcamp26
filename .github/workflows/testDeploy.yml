@@ -67,10 +67,3 @@ jobs:
             sftp -o StrictHostKeyChecking=no -i key.pem  ubuntu@54.173.47.62 '
             put abc.txt
             '
-    
-
-      - name: SSH into EC2 and deploy
-        run: |
-          ssh -o StrictHostKeyChecking=no -i key.pem  ubuntu@54.173.47.62 '
-            mkdir paritosh
-          '
