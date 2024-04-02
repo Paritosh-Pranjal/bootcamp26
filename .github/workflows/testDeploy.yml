@@ -62,7 +62,7 @@ jobs:
 
       - name: SSH into EC2 and deploy
         run: |
-          ssh -o StrictHostKeyChecking=no -i key.pem  ubutnu@54.173.47.62 '
+          ssh -o StrictHostKeyChecking=no -i key.pem  ubuntu@54.173.47.62 '
             mkdir test && 
             cd test &&
             touch 1 2 3 4
