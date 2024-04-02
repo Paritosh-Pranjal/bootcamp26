@@ -59,6 +59,14 @@ jobs:
           sudo chmod 600 key.pem
           cat key.pem
           ls -lh 
+        
+      - name: Send file to ec2
+        run: |
+            touch "This is sftp"  > abc.txt
+            sftp -o StrictHostKeyChecking=no -i key.pem  ubuntu@54.173.47.62 '
+            put abc.txt
+            '
+    
 
       - name: SSH into EC2 and deploy
         run: |
